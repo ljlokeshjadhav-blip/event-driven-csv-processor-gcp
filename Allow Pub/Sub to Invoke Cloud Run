@@ -1,0 +1,10 @@
+Get project number:
+===============================================================================================================================================================
+gcloud projects describe analog-ship-482708-h2 --format="value(projectNumber)"
+
+Grant permission:
+===============================================================================================================================================================
+gcloud run services add-iam-policy-binding cloud-storage-function-trigger \
+--member=serviceAccount:service-1071322062612@gcp-sa-pubsub.iam.gserviceaccount.com \
+--role=roles/run.invoker \
+--region us-central1
