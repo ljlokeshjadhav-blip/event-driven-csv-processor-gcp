@@ -8,3 +8,14 @@ gcloud run services add-iam-policy-binding cloud-storage-function-trigger \
 --member=serviceAccount:service-1071322062612@gcp-sa-pubsub.iam.gserviceaccount.com \
 --role=roles/run.invoker \
 --region us-central1
+
+Upload CSV File (Trigger the Event)
+
+From your local machine:
+gsutil cp C:\Users\SIDDHI\Downloads\sales.csv gs://sales-data-event/raw-data/
+
+Verify Output
+
+gsutil ls gs://sales-data-event/reports/
+
+gsutil cat gs://sales-data-event/reports/sales.json
